@@ -1,0 +1,32 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\User;
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
+
+class UserSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        User::create([
+            'uuid' => Str::uuid(),
+            'name' => 'Ronaldo Neves',
+            'email' => 'ronaldo@gmail.com',
+            'password' => bcrypt('12qwaszx')
+        ]);
+
+        User::create([
+            'uuid' => Str::uuid(),
+            'name' => 'João Marcelo',
+            'email' => 'marcellomonteiro1@icloud.com',
+            'password' => bcrypt('12qwaszx')
+        ]);
+    }
+}
